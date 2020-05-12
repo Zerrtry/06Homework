@@ -37,23 +37,21 @@
             </form>
             <form class="form-inline">
               <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="cityInput" placeholder="Search">
+                <input type="text" id="cityInput" placeholder="Name of the city">
               </div>
-              <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
+              <button type="submit" class="btn btn-primary mb-2" id="searchBtn"><i class="fas fa-search"></i></button>
             </form>
             <!-- History -->
             <div class="row">
-              <table id="searchHistory">
-                <tr>
-                  <th>
-                    <td>City</td>
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    <td>City</td>
-                  </th>
-                </tr>
+              <table class="table table-bordered" id="searchHistory">
+                <tbody>
+                  <!-- <tr>
+                    <th scope="row">1</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                  </tr> -->
+                </tbody>
               </table>
             </div>
           </div>
@@ -61,14 +59,15 @@
           <div class="col-8 float-right">
             <div class="row">
               <div class="col-12" id="currentWeather">
-                <div class="card bg-light text-dark p-2 rem shadow-lg p-3 mb-5 bg-white rounded" style="width: 710; height: 19rem;">
+                <div class="card bg-light text-dark p-2 rem shadow-lg p-3 mb-5 bg-white rounded">
                   <!-- Current weather -->
                   <div id="current">
                     <div>
-                      <h2>
+                      <h3>
                         <span id="cityName"></span>
-                        <span id="currentDate"></span>
-                      </h2>
+                        <span id="currentDay"></span>
+                        <span id="weatherIcon"></span>
+                      </h3>
                     </div>
                     <div id="temperature"></div>
                     <div id="humidity"></div>
@@ -94,6 +93,9 @@
           </div> 
         </div>
       </div>
+    <footer class="container-fluid text-center text-light bg-dark footer">
+      <h4>“There's no such thing as bad weather, only unsuitable clothing.” ― Alfred Wainwright</h4>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
