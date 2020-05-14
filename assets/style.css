@@ -51,4 +51,5 @@ th:hover{
 footer{
 position: fixed;
 bottom: 0px;
+min-height: 40px;
 }
