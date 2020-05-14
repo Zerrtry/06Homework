@@ -29,11 +29,11 @@ $(document).ready(function(){
         
                 $("#cityName").html(`${response.name}`);
                 $("#currentDay").html(moment().format('(MM/DD/YYYY)'));//refactoring later to make getting time from API
-                $("#weatherIcon").empty().append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}@2x.png">`);
+                $("#weatherIcon").empty().append(`<img src = "https://openweathermap.org/img/wn/${weatherIcon}@2x.png">`);
                 $("#temperature").html(`Temperature: ${tempFahrenheit} &degF`);
                 $("#humidity").html(`Humidity: ${humidity} %`);
                 $("#windSpeed").html(`Wind Speed: ${windSpeed} MPH`);
-                var queryURLuv = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lat + "&lon=" + lon;
+                var queryURLuv = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lat + "&lon=" + lon;
         $.ajax({
             url: queryURLuv,
             method: "GET"
@@ -82,8 +82,9 @@ $(document).ready(function(){
         addToHistory(userInput);
     });
 
-    $(".itemInHistory").click(function(){
+    $("th").click(function(){
         console.log("TH BEEN HITED");
+        alert("The paragraph was clicked.");
     });  
 });
 
