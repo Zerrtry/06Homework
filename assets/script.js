@@ -83,7 +83,7 @@ $(document).ready(function(){
                 var newdate1 = new Date(getdate1*1000);
                 var date1 = newdate1.getDate();
                 var year1 = newdate1.getFullYear(); 
-                var month1 = newdate1.getMonth();
+                var month1 = newdate1.getMonth()+1;
                 console.log(month1, "/", date1, "/", year1);
                 $("#day1").empty().append(`<div class="card text-white bg-primary fcard" style="max-width: 18rem;">
                 <div class="card-header date">${month1}/${date1}/${year1}</div>
@@ -105,7 +105,7 @@ $(document).ready(function(){
                 var newdate2 = new Date(getdate2*1000);
                 var date2 = newdate2.getDate();
                 var year2 = newdate2.getFullYear(); 
-                var month2 = newdate2.getMonth();
+                var month2 = newdate2.getMonth()+1;
                 console.log(month2, "/", date2, "/", year2);
                 $("#day2").empty().append(`<div class="card text-white bg-primary fcard" style="max-width: 18rem;">
                 <div class="card-header date">${month2}/${date2}/${year2}</div>
@@ -127,7 +127,7 @@ $(document).ready(function(){
                 var newdate3 = new Date(getdate3*1000);
                 var date3 = newdate3.getDate();
                 var year3 = newdate3.getFullYear(); 
-                var month3 = newdate3.getMonth();
+                var month3 = newdate3.getMonth()+1;
                 console.log(month3, "/", date3, "/", year3);
                 $("#day3").empty().append(`<div class="card text-white bg-primary fcard" style="max-width: 18rem;">
                 <div class="card-header date">${month3}/${date3}/${year3}</div>
@@ -149,7 +149,7 @@ $(document).ready(function(){
                 var newdate4 = new Date(getdate4*1000);
                 var date4 = newdate4.getDate();
                 var year4 = newdate4.getFullYear(); 
-                var month4 = newdate4.getMonth();
+                var month4 = newdate4.getMonth()+1;
                 console.log(month4, "/", date4, "/", year4);
                 $("#day4").empty().append(`<div class="card text-white bg-primary fcard" style="max-width: 18rem;">
                 <div class="card-header date">${month4}/${date4}/${year4}</div>
@@ -171,7 +171,7 @@ $(document).ready(function(){
                 var newdate5 = new Date(getdate5*1000);
                 var date5 = newdate5.getDate();
                 var year5 = newdate5.getFullYear(); 
-                var month5 = newdate5.getMonth();
+                var month5 = newdate5.getMonth()+1;
                 console.log(month5, "/", date5, "/", year5);
                 $("#day5").empty().append(`<div class="card text-white bg-primary fcard" style="max-width: 18rem;">
                 <div class="card-header date">${month5}/${date5}/${year5}</div>
