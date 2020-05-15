@@ -4,6 +4,7 @@
 $(document).ready(function(){
     // var history = JSON.parse(localStorage.getItem("searchHistory")) || [];
     // console.log(history);
+    var history =[];
 
     var startSearch = function(userInput){
         console.log("search started");
