@@ -2,11 +2,22 @@
 
 
 $(document).ready(function(){
-    // var history = JSON.parse(localStorage.getItem("searchHistory")) || [];
-    // console.log(history);
-    var history =[];
+    
+    var history = [];
+    
+    var storedData = localStorage.getItem("history");
+    if (storedData){
+        history = JSON.parse(storedData);
+        console.log("restored",history);
+        retrieveHistory(history);
+        var userInput = history[0];
+        console.log("userInput:",userInput);
+        startSearch(userInput);    
+    };
+    
+    
 
-    var startSearch = function(userInput){
+    function startSearch (userInput){
         console.log("search started");
         var APIKey = "9f7d706ef6d3f4a96f60c4354887012e";
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInput + "&appid=" + APIKey;
@@ -185,12 +196,18 @@ $(document).ready(function(){
         });
     };
 
+    function retrieveHistory (history){
+        history.forEach(element => 
+            $("#searchHistory").prepend(`<tr><th class="cityInHistory" scope="row">${element}</th></tr>`)
+        );
+    };
+
     var addToHistory = function(userInput){
         if (userInput!=0 && history.length <10){
-            $("#searchHistory").append(`<tr><th class="cityInHistory" scope="row">${userInput}</th></tr>`)
+            $("#searchHistory").prepend(`<tr><th class="cityInHistory" scope="row">${userInput}</th></tr>`)
             history.push(userInput);
             console.log(history);
-            localStorage.setItem("searchHistory", history);
+            localStorage.setItem("history", JSON.stringify(history));
         // code in process
         // } else {
         //     $("#searchHistory").html(`<tr><th class="cityInHistory" scope="row">${userInput}</th></tr>`)
