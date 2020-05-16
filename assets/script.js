@@ -213,6 +213,15 @@ $(document).ready(function(){
         //     $("#searchHistory").html(`<tr><th class="cityInHistory" scope="row">${userInput}</th></tr>`)
         };
     };
+    function cleaningInputgroup(){ 
+        var cleanInputgroup = $(
+        `<input type="text" class="form-control" placeholder="City" id="cityInput">
+        <div class="input-group-append">
+        <button type="submit" class="btn btn-primary" id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>`
+        );
+        $(".input-group").html(cleanInputgroup);
+    };
     
     $(document).on("click",".btn", function(){
         event.preventDefault(); 
@@ -220,6 +229,7 @@ $(document).ready(function(){
         console.log(userInput);
         startSearch(userInput);
         addToHistory(userInput);
+        cleaningInputgroup()
     });
 
     $(document).on('click','.cityInHistory', function(){
