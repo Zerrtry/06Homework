@@ -30,27 +30,20 @@
         <div class="row">
           <!--Left column-->
           <div class="col-4 float-left search">
-            <form class="form-inline">
-              <div class="form-group mx-sm-3 mb-2">
-                <label for="searchCity"><h6>Search for a City:</h6></label>
+            <form>
+              <label for="cityInput">Search for a City:</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="City" id="cityInput">
+                <div class="input-group-append">
+                 <button type="submit" class="btn btn-primary" id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
               </div>
-            </form>
-            <form class="form-inline">
-              <div class="form-group mx-sm-3 mb-2">
-                <input type="text" id="cityInput" placeholder="Name of the city">
-              </div>
-              <button type="submit" class="btn btn-primary mb-2" id="searchBtn"><i class="fas fa-search"></i></button>
             </form>
             <!-- History -->
             <div class="row">
-              <table class="table table-bordered" id="searchHistory">
-                <tbody>
-                  <!-- <tr>
-                    <th scope="row">1</th>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                  </tr> -->
+              <table class="table table-bordered" >
+                <tbody id="searchHistory">
+                  <!-- here is the palce for adding <tr></tr> elements -->
                 </tbody>
               </table>
             </div>
@@ -58,7 +51,7 @@
           <!--Right column-->
           <div class="col-8 float-right">
             <div class="row">
-              <div class="col-12" id="currentWeather">
+              <div class="col-12">
                 <div class="card bg-light text-dark p-2 rem shadow-lg p-3 mb-5 bg-white rounded">
                   <!-- Current weather -->
                   <div id="current">
@@ -78,9 +71,9 @@
               </div>
             </div>  
             <div class="row">
-              <div class="col-12" id="all5day">
+              <div class="col-12">
                 <h4>5-Day Forcast:</h4>
-                <!-- 5 Day forcast dynamically inserts  here -->
+                <!-- 5 Day forcast dynamically inserts in divs below -->
                 <div class="row align-items-center forecast">
                   <div class="col-sm" id="day1"></div>
                   <div class="col-sm" id="day2"></div>
